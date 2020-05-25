@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Banner from '../components/banner'
 import Works from '../components/Works'
 import AboutMe from '../components/AboutMe'
+import "normalize.css"
 import "../styles/styles.scss"
 
 
@@ -14,8 +15,8 @@ const IndexPage = () => (
     <Header />
     <Banner />
     <SEO title="Home" />
-    <AboutMe />
     <Works />
+    <AboutMe />
 
   </div>
 )
