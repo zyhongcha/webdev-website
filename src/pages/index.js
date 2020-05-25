@@ -12,12 +12,13 @@ import "../styles/styles.scss"
 
 const IndexPage = () => (
   <div className="App">
-    <Header />
-    <Banner />
-    <SEO title="Home" />
-    <Works />
-    <AboutMe />
-
+    <div className="wrapper">
+      <Header />
+      <Banner />
+      <SEO title="Home" />
+      <Works />
+      <AboutMe />
+    </div>
   </div>
 )
 
