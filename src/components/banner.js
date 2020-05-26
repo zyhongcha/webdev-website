@@ -7,8 +7,8 @@ const Banner = () => {
     <div className="hero">
       <div className="hero__wrapper">
         <div className="hero__main-text">
-          <h1 style={{ textIndent: "-5rem" ,lineHeight: "1rem", color: "#434343" }}>Create,</h1>
-          <h1 style={{ textIndent: "5rem" }}><mark>Experience</mark>;</h1>
+          <h1 style={{lineHeight: "1rem", color: "#434343" }}>Create,</h1>
+          <h1><mark>Experience</mark>;</h1>
           <p>Hello, my name is Zyhong Liu. I build websites with a fiery passion, my goal is to create websites with a unique user experience combined in a good website layout. <a href="#">Learn more about me.</a></p>
         </div>
         <div className="hero__cta">

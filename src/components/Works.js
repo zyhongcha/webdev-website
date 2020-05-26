@@ -47,7 +47,6 @@ function Works() {
   return (
     <div className="works-container">
       <div className="works-container__inner-wrapper">
-        <h1>WORKS;</h1>
         <div id="sake-academy" className="works-container__showcase">
           <div className="works-container__showcase-display">
             <a href="https://sake-academy.eu" target="_blank"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>

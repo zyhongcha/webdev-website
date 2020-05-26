@@ -9,7 +9,6 @@ import AboutMe from '../components/AboutMe'
 import "normalize.css"
 import "../styles/styles.scss"
 
-
 const IndexPage = () => (
   <div className="App">
     <div className="wrapper">
