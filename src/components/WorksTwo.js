@@ -5,77 +5,76 @@ import { Link } from "gatsby";
 import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 
-function Works() {
+function WorksTwo() {
 
   const data = useStaticQuery(graphql`
   query {
-    sakeOne: file(relativePath: { eq: "Portfolio-SAKE-Mac.png" }) {
+    zyhongchaOne: file(relativePath: { eq: "Portfolio-Zyhongcha-Mac.png" }) {
       childImageSharp {
         fluid(maxWidth: 630, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    sakeTwo: file(relativePath: { eq: "Portfolio-Sake-phone-3.png" }) {
+    zyhongchaTwo: file(relativePath: { eq: "zyhongcha-singlepost-1.png" }) {
       childImageSharp {
         fixed(width: 336, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    sakeThree: file(relativePath: { eq: "Portfolio-Sake-phone-1.png" }) {
+    zyhongchaThree: file(relativePath: { eq: "zyhongcha-blogpost-3.png" }) {
       childImageSharp {
         fixed(width: 336, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    sakeFour: file(relativePath: { eq: "Portfolio-Sake-phone-2.png" }) {
+    zyhongchaFour: file(relativePath: { eq: "zyhongcha-newsletter-2.png" }) {
       childImageSharp {
         fixed(width: 336, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
-    }
+    } 
   }`)
 
   return (
-    <section id="sake-academy" >
+    <section id="zyhongcha">
       <div className="works-container">
         <div className="works-container__inner-wrapper">
           <div className="works-container__showcase">
             <div className="works-container__showcase-display">
-              <a href="https://sake-academy.eu" target="_blank"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>
+              <a href="https://zyhongcha.com" target="_blank"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
             </div>
-            <div className="works-container__showcase-description" id="sake-academy-description">
-
-              <h4>Schooling Website</h4>
-              <h2>Sake &amp; Shochu Academy Europe</h2>
+            <div className="works-container__showcase-description" id="zyhongcha-description">
+              <h4>Scientific Tea Blog</h4>
+              <h2>Zyhong's Journal of Tea</h2>
               <span className="divider"></span>
-              <p>This is a schooling website
+              <p>This is a tea website
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
-
               <div className="works-container__showcase-details">
                 <div className="works-container__showcase-details-text">
                   <h3>Details</h3>
                   <p>por invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam e</p>
                 </div>
               </div>
+
               <div className="works-container__showcase-details-mobileshots">
                 <div className="works-container__mobile-1">
-                  <a href="https://sake-academy.eu" target="_blank"><Img fixed={data.sakeTwo.childImageSharp.fixed} /></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaTwo.childImageSharp.fixed}/></a></div>
                 <div className="works-container__mobile-2">
-                  <a href="https://sake-academy.eu" target="_blank"><Img fixed={data.sakeThree.childImageSharp.fixed} /></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaThree.childImageSharp.fixed}/></a></div>
                 <div className="works-container__mobile-3">
-                  <a href="https://sake-academy.eu" target="_blank"><Img fixed={data.sakeFour.childImageSharp.fixed} /></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaFour.childImageSharp.fixed}/></a></div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     </section>
   )
 }
 
-export default Works;
+export default WorksTwo;

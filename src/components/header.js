@@ -2,12 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
 
 
   return (
     <header>
-      <div className="header">
+      <div className="header" onScroll={}>
         <div className="header__inner-header">
           <div className="header__logo">
             <Link to="/">ZYHONG LIU</Link></div>
