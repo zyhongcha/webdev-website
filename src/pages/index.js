@@ -1,6 +1,7 @@
 import React from "react"
+import useSticky from "../components/hooks/useSticky"
+import useNavChangeColor from "../components/hooks/useNavChangeColor"
 import { Link } from "gatsby"
-
 import SEO from "../components/seo"
 import Header from '../components/header'
 import Banner from '../components/banner'
@@ -10,17 +11,21 @@ import AboutMe from '../components/AboutMe'
 import "normalize.css"
 import "../styles/styles.scss"
 
-const IndexPage = () => (
-  <div className="App">
-    <div className="wrapper">
-      <Header />
-      <Banner />
-      <SEO title="Home" />
-      <Works />
-      <WorksTwo />
-      <AboutMe />
-    </div>
-  </div>
-)
+const IndexPage = () => {
+  const { isSticky, element } = useSticky()
+  const { hasReached, newWorkElement } = useNavChangeColor()
 
+  return (
+    <div className="App">
+      <div className="wrapper">
+        <Header sticky={isSticky} hasReached={hasReached} />
+        <Banner />
+        <SEO title="Home" />
+        <Works element={element} />
+        <WorksTwo newWorkElement={newWorkElement} />
+        <AboutMe />
+      </div>
+    </div>
+  )
+}
 export default IndexPage

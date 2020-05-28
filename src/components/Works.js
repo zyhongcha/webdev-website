@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 
-function Works() {
+
+function Works( { element } ) {
 
   const data = useStaticQuery(graphql`
   query {
@@ -42,7 +43,7 @@ function Works() {
   return (
     <section id="sake-academy" >
       <div className="works-container">
-        <div className="works-container__inner-wrapper">
+        <div className="works-container__inner-wrapper" ref={element}>
           <div className="works-container__showcase">
             <div className="works-container__showcase-display">
               <a href="https://sake-academy.eu" target="_blank"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>

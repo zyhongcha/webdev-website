@@ -2,12 +2,30 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = () => {
+const Header = ({ sticky, hasReached }) => {
+
+  function whichSection() {
+    let className = [];
+    if (sticky) {
+      className.push("sticky works-1")
+    }
+    if (hasReached) {
+      className.splice(className.indexOf('works-1'), 1);
+      className.push("sticky works-2")
+    }
+    /*
+    let classNameIterator = className.values();
+    for (let value of classNameIterator) {
+    return value;
+    }
+    */
+    return className.join(" ");
+  }
 
 
   return (
-    <header>
-      <div className="header" onScroll={}>
+    <header className={whichSection()}>
+      <div className="header">
         <div className="header__inner-header">
           <div className="header__logo">
             <Link to="/">ZYHONG LIU</Link></div>

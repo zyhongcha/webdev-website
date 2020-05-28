@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 
-function WorksTwo() {
+function WorksTwo({ newWorkElement }) {
 
   const data = useStaticQuery(graphql`
   query {
@@ -40,9 +40,9 @@ function WorksTwo() {
   }`)
 
   return (
-    <section id="zyhongcha">
+    <section id="zyhongcha" >
       <div className="works-container">
-        <div className="works-container__inner-wrapper">
+        <div className="works-container__inner-wrapper" ref={newWorkElement}>
           <div className="works-container__showcase">
             <div className="works-container__showcase-display">
               <a href="https://zyhongcha.com" target="_blank"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
@@ -63,11 +63,11 @@ function WorksTwo() {
 
               <div className="works-container__showcase-details-mobileshots">
                 <div className="works-container__mobile-1">
-                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaTwo.childImageSharp.fixed}/></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaTwo.childImageSharp.fixed} /></a></div>
                 <div className="works-container__mobile-2">
-                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaThree.childImageSharp.fixed}/></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaThree.childImageSharp.fixed} /></a></div>
                 <div className="works-container__mobile-3">
-                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaFour.childImageSharp.fixed}/></a></div>
+                  <a href="https://zyhongcha.com" target="_blank"><Img fixed={data.zyhongchaFour.childImageSharp.fixed} /></a></div>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ const Banner = () => {
 
   return (
 
-    <div className="hero">
+    <div className="hero" >
       <div className="hero__wrapper">
         <div className="hero__main-text">
           <h1 style={{lineHeight: "1rem", color: "#434343" }}>Create,</h1>
