@@ -21,9 +21,11 @@ const IndexPage = () => {
         <Header sticky={isSticky} hasReached={hasReached} />
         <Banner />
         <SEO title="Home" />
-        <Works element={element} />
-        <WorksTwo newWorkElement={newWorkElement} />
-        <AboutMe />
+        <div className="afterHeaderWrapper">
+          <Works element={element} />
+          <WorksTwo newWorkElement={newWorkElement} />
+          <AboutMe />
+        </div>
       </div>
     </div>
   )

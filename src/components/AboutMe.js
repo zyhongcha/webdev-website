@@ -1,20 +1,30 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import Img from 'gatsby-image';
 import React from "react";
 
-const AboutMe = () => {
-  const markdown = useStaticQuery(graphql`
-  {
+const AboutMe = ( ) => {
+
+  const data = useStaticQuery(graphql`
+  query {
     markdownRemark(frontmatter: { id: { eq: "about-me" }}) {
       html
     }
+  image: file(relativePath: { eq: "me.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 512, quality: 100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   }
   `);
   return (
-    <section id="about-me-container">
-      <div>
-        <div id="about-me-container-inner-text"
-          dangerouslySetInnerHTML={{ __html: markdown.markdownRemark.html }} />
+    <section className="about-me__container" >
+      <div className="about-me__container-inner-wrapper">
+        <h2>Hello.</h2>
+        <div className="about-me__container-inner-wrapper-text"
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div id="portrait"><Img fluid={data.image.childImageSharp.fluid} /></div>
       </div>
 
 

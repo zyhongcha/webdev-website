@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 
 function useNavChangeColor() {
   const [hasReached, setHasReached] = useState(false);
-  const newWorkElement = useRef(null);
+  let newWorkElement = useRef(null);
 
   const handleScroll = () => {
     window.scrollY > newWorkElement.current.getBoundingClientRect().bottom 
