@@ -2,24 +2,19 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ sticky, hasReached }) => {
+const Header = ({ sticky, hasReached, isIntersectedWorksOne ,isIntersectedWorksTwo }) => {
 
   function whichSection() {
     let className = [];
-    if (sticky) {
-      className.push("sticky works-1")
+    if (isIntersectedWorksOne) {
+      className.push("works-1")
+    } else if (isIntersectedWorksTwo) {
+      console.log(className)  ;
+      className.push("works-2");
     }
-    if (hasReached) {
-      className.splice(className.indexOf('works-1'), 1);
-      className.push("sticky works-2")
-    }
-    /*
-    let classNameIterator = className.values();
-    for (let value of classNameIterator) {
-    return value;
-    }
-    */
+    className.push("sticky")
     return className.join(" ");
+
   }
 
 

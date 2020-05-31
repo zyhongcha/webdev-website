@@ -68,11 +68,8 @@ p {
 //Animation Classes
 .fadeIn {
   opacity: 0;
-  overflow:hidden;
-  top: -60px;
-  position: relative;
+  transform: translateY(60px);
 }
-
 
 //Mixin for buttons
 @mixin myButtons($lineWidth, $lineHeight, $transf) {
@@ -376,14 +373,14 @@ p {
   animation: moveDown 500ms ease-in-out;
   transition: background-color 1000ms ease-in-out;
 }
-  .works-1 {
+.works-1 {
     background: #2C3246;
     a {color: #EE6D4d!important};
-  }
-  .works-2 {
+}
+.works-2 {
     background: #f8f6f3;
     a {color: #F49F10!important};
-  }
+}
 
 header {
   width: 100%;

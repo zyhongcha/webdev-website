@@ -6,32 +6,30 @@ import { IconContext } from 'react-icons';
 import { TweenLite } from "gsap";
 import { useIntersection } from "use-intersection";
 
-function Works({ element }) {
+function Works({ element, triggerRefOne }) {
 
   const triggerRef = useRef(null);
-  const [tween, setTween] = useState();
 
 
   const intersection = useIntersection(triggerRef, {
     root: null,
     rootMargin: "0px",
     threshold: 0.1,
-    once:true
+    once: true
   });
 
 
   //Intersection for Fade-in Animation
   useEffect(() => {
-    if (intersection && intersection.isIntersecting) {
-      setTween(
-        TweenLite.to(".fadeIn", 1, {
-          opacity: 1,
-          y: 60,
-          ease: "power4.out",
-          stagger: 0.2,
-        })
-      )
 
+    if (intersection) {
+      TweenLite.to("#sake-academy-description .fadeIn", 1, {
+        opacity: 1,
+        ease: "power4.out",
+        y: 0,
+        stagger: 0.2,
+      }
+      )
     }
   }, [intersection]);
 
@@ -69,7 +67,7 @@ function Works({ element }) {
   }`)
 
   return (
-    <section id="sake-academy" >
+    <section id="sake-academy" ref={triggerRefOne}>
       <div className="works-container">
         <div className="works-container__inner-wrapper" ref={element}>
           <div className="works-container__showcase">
@@ -79,15 +77,13 @@ function Works({ element }) {
             <div className="works-container__showcase-description" id="sake-academy-description" ref={triggerRef}>
               <h4 className="fadeIn">Schooling Website</h4>
               <h2 className="fadeIn">Sake &amp; Shochu Academy Europe</h2>
-              <span className="divider"></span>
               <p className="fadeIn">This is a schooling website
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-
-              <div className="works-container__showcase-details">
+              </p>
+              <div className="works-container__showcase-details fadeIn">
                 <div className="works-container__showcase-details-text">
-                  <h3 className="fadeIn">Details</h3>
-                  <p className="fadeIn">por invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam e</p>
+                  <h3 >Details</h3>
+                  <p>por invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam e</p>
                 </div>
               </div>
               <div className="works-container__showcase-details-mobileshots">
