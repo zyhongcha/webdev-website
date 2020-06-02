@@ -1,45 +1,36 @@
 import React, { useEffect, useRef } from 'react';
-import { TweenLite, TimelineLite, Power2 } from "gsap";
-import backgroundImage from "../images/DotGrid.png";
+import { TweenLite, TimelineLite, Power2} from "gsap";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Banner = () => {
-/*
-  let backgroundReveal = useRef(null);
-  let backgroundImagery = CSSRulePlugin.getRule(".hero:before");
-  let headlineText = useRef(null);
 
+  let backgroundImagery = CSSRulePlugin.getRule(".hero:before");
   let tl = new TimelineLite();
 
   useEffect(() => {
     
-    const fadeInText = element => {
-    TweenLite.from(element, 1, { y: 60, stagger: {  each: 0.2}});
-    }
-    fadeInText(".fadeIn")
-
-    tl.to(backgroundReveal, 0, { css: { visibility: "visible" } })
-    .to(backgroundImagery, 1, { height: "0%", delay: 2, ease: Power2.easeOut })
+    tl.to(".display.intro", 1, { opacity: 1, stagger: 1})
+    .to(".display", 1, {opacity: 1}).to(backgroundImagery, 2, { height: "0%" })
   }, []);
-*/
+
   return (
 
     <div className="hero" >
       <div className="hero__wrapper">
         <div className="hero__main-text">
-          <h1 className="fadeIn" style={{ lineHeight: "2.7rem", color: "#434343" }}>Create,</h1>
-          <h1 className="fadeIn"><mark>Experience</mark>;</h1>
-          <p className="fadeIn">Hello, my name is Zyhong Liu. I build websites with a fiery passion, my goal is to create websites with a unique user experience combined in a good website layout. <a href="#">Learn more about me.</a></p>
+          <h1 className="display intro" style={{ lineHeight: "2.7rem", color: "#434343" }}>Create,</h1>
+          <h1 className="display intro"><mark>Experience</mark>;</h1>
+          <p className="display">Hello, my name is Zyhong Liu. I build websites with a fiery passion, my goal is to create websites with a unique user experience combined in a good website layout. <a href="#">Learn more about me.</a></p>
         </div>
-        <div className="hero__cta">
-          <div className="button fadeIn" id="btn-contact">
+        <div className="hero__cta display">
+          <div className="button" id="btn-contact">
             <span className="line-1"></span>
             <span className="line-2"></span>
             <span className="line-3"></span>
             <span className="line-4"></span>
-              Contact Me
+              Contact
             </div>
-          <div className="button fadeIn" id="btn-portfolio">
+          <div className="button" id="btn-portfolio">
             <span className="line-1"></span>
             <span className="line-2"></span>
             <span className="line-3"></span>

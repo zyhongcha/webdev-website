@@ -14,7 +14,7 @@ export function WorksTwo({ newWorkElement, triggerRefTwo }) {
   const intersection = useIntersection(triggerRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3,
+    threshold: 0.8,
     once: true
   });
 
@@ -25,7 +25,7 @@ export function WorksTwo({ newWorkElement, triggerRefTwo }) {
         opacity: 1,
         ease: "power4.out",
         y: 0,
-        stagger: 0.2,
+        stagger: 0.3,
       }
       )
     }

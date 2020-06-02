@@ -19,7 +19,7 @@ const AboutMe = ( ) => {
   }
   `);
   return (
-    <section className="about-me__container" >
+    <section id="about" className="about-me__container" >
       <div className="about-me__container-inner-wrapper">
         <h2>Hello.</h2>
         <div className="about-me__container-inner-wrapper-text"

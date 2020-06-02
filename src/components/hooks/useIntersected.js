@@ -3,39 +3,50 @@ import { useIntersection } from "use-intersection";
 
 
 function useIntersected() {
-  const [isIntersectedWorksOne, setIntersectedWorksOne] = useState(false);
-  const [isIntersectedWorksTwo, setIntersectedWorksTwo] = useState(false);
+  const [isIntersectedAt, setIntersectedAt] = useState(0);
   let triggerRefOne = useRef(null);
   let triggerRefTwo = useRef(null);
 
-  
+
   const intersectionOne = useIntersection(triggerRefOne, {
-    rootMargin: "0% 0px -99% 0px",
+    rootMargin: "0% 0px -100% 0px",
     threshold: 0
   })
 
+
   const intersectionTwo = useIntersection(triggerRefTwo, {
-    rootMargin: "0% 0px -99% 0px",
+    rootMargin: "0% 0px -100% 0px",
     threshold: 0
   })
+  
+  const debounce = (func, wait = 20, immediate = true) => {
+    let timeOut
+    return () => {
+      let context = this,
+        args = arguments
+      const later = () => {
+        timeOut = null
+        if (!immediate) func.apply(context, args)
+      }
+      const callNow = immediate && !timeOut
+      clearTimeout(timeOut)
+      timeOut = setTimeout(later, wait)
+      if (callNow) func.apply(context, args)
+    }
+  }
 
   useEffect(() => {
     if (intersectionOne) {
-      setIntersectedWorksOne(true);
+      debounce(setIntersectedAt(1))
+    } else if (intersectionTwo) {
+      debounce(setIntersectedAt(2))
     } else {
-      setIntersectedWorksOne(false)
-    }
-  }, [intersectionOne])
+      debounce(setIntersectedAt(0)) }
 
-  useEffect(() => {
-    if (intersectionTwo) {
-      setIntersectedWorksTwo(true);
-    } else {
-      setIntersectedWorksTwo(false)
-    }
-  }, [intersectionTwo])
+  }, [debounce, intersectionOne, intersectionTwo])
 
-  return { isIntersectedWorksOne,isIntersectedWorksTwo, triggerRefOne,triggerRefTwo }
+
+  return { isIntersectedAt, triggerRefOne, triggerRefTwo }
 };
 
 export default useIntersected

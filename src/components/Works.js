@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from "gatsby";
-import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
-import { IconContext } from 'react-icons';
+
 import { TweenLite } from "gsap";
 import { useIntersection } from "use-intersection";
 
@@ -13,8 +12,8 @@ function Works({ element, triggerRefOne }) {
 
   const intersection = useIntersection(triggerRef, {
     root: null,
-    rootMargin: "0px",
-    threshold: 0.1,
+    rootMargin: "200px 0px 0px 0px",
+    threshold: 1,
     once: true
   });
 
@@ -27,7 +26,7 @@ function Works({ element, triggerRefOne }) {
         opacity: 1,
         ease: "power4.out",
         y: 0,
-        stagger: 0.2,
+        stagger: 0.3,
       }
       )
     }
@@ -71,10 +70,10 @@ function Works({ element, triggerRefOne }) {
       <div className="works-container">
         <div className="works-container__inner-wrapper" ref={element}>
           <div className="works-container__showcase">
-            <div className="works-container__showcase-display">
+            <div className="works-container__showcase-display" ref={triggerRef}>
               <a href="https://sake-academy.eu" target="_blank"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>
             </div>
-            <div className="works-container__showcase-description" id="sake-academy-description" ref={triggerRef}>
+            <div className="works-container__showcase-description" id="sake-academy-description" >
               <h4 className="fadeIn">Schooling Website</h4>
               <h2 className="fadeIn">Sake &amp; Shochu Academy Europe</h2>
               <p className="fadeIn">This is a schooling website

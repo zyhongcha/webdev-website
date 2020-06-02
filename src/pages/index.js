@@ -15,12 +15,12 @@ import "../styles/styles.scss"
 const IndexPage = () => {
   const { isSticky, element } = useSticky()
   const { hasReached, newWorkElement } = useNavChangeColor()
-  const { isIntersectedWorksOne, isIntersectedWorksTwo, triggerRefOne ,triggerRefTwo } = useIntersected()
+  const { isIntersectedAt, triggerRefOne ,triggerRefTwo } = useIntersected()
 
   return (
     <div className="App">
       <div className="wrapper">
-        <Header sticky={isSticky} hasReached={hasReached} isIntersectedWorksOne={isIntersectedWorksOne} isIntersectedWorksTwo={isIntersectedWorksTwo}/>
+        <Header sticky={isSticky} hasReached={hasReached} isIntersectedAt={isIntersectedAt}/>
         <Banner />
         <SEO title="Home"/>
         <div className="afterHeaderWrapper">
