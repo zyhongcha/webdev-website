@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 import { TweenLite } from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { useIntersection } from "use-intersection";
 
 export function WorksTwo({ newWorkElement, triggerRefTwo }) {
