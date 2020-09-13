@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from "gatsby";
 import { TweenLite } from "gsap";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
 import { useIntersection } from "use-intersection";
 
 function Works({ element, triggerRefOne }) {
