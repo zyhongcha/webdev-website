@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TweenLite, TimelineLite, Power2} from "gsap";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import { TweenLite, TimelineLite, Power2 } from "gsap";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Banner = () => {
@@ -9,9 +8,9 @@ const Banner = () => {
   let tl = new TimelineLite();
 
   useEffect(() => {
-    
-    tl.to(".display.intro", 1, { opacity: 1, stagger: 1})
-    .to(".display", 1, {opacity: 1}).to(backgroundImagery, 2, { height: "0%" })
+
+    tl.to(".display.intro", 1, { opacity: 1, stagger: 1 })
+      .to(".display", 1, { opacity: 1 }).to(backgroundImagery, 2, { height: "0%" })
   }, []);
 
   return (
