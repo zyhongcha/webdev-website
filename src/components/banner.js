@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { TweenLite, TimelineLite, Power2} from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Banner = () => {
