@@ -4,13 +4,12 @@ import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Banner = () => {
 
-  let backgroundImagery = CSSRulePlugin.getRule(".hero:before");
   let tl = new TimelineLite();
 
   useEffect(() => {
 
     tl.to(".display.intro", 1, { opacity: 1, stagger: 1 })
-      .to(".display", 1, { opacity: 1 }).to(backgroundImagery, 2, { height: "0%" })
+      .to(".display", 1, { opacity: 1 })
   }, []);
 
   return (
