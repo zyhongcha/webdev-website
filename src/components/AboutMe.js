@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image';
 import React from "react";
 
-const AboutMe = ( ) => {
+const AboutMe = () => {
 
   const data = useStaticQuery(graphql`
   query {
@@ -24,6 +24,7 @@ const AboutMe = ( ) => {
         <h2>Hello.</h2>
         <div className="about-me__container-inner-wrapper-text"
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <p>Interested in getting to know more about me? Message me!</p>
         <div id="portrait"><Img fluid={data.image.childImageSharp.fluid} /></div>
       </div>
 
