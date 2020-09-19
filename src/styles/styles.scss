@@ -40,8 +40,7 @@ background: rgba(0, 0, 0, .3);
 }
 
 .App {
-background: url("../images/DotGrid.png") top center repeat-y;
-background-size: contain;
+
 }
 
 a {
@@ -49,6 +48,10 @@ font-weight: 700;
 text-decoration: none;
 color: $pColor;
 }
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font;
+}
+
 
 h1 {
 font-size: 2.5rem;
@@ -292,7 +295,13 @@ bottom: 0;
 }
 }
 }
-
+button {
+  background:none;
+  border: none;
+}
+button:focus {
+  outline:none;
+}
 
 .button {
 position: relative;
@@ -430,7 +439,7 @@ left: 0;
 }
 #works-1 {
 background-color: #2C3246;
-a {
+a,button {
   color: #EE6D4d!important;
   transition: color 500ms ease-in-out;
 
@@ -441,7 +450,7 @@ a {
 }
 #works-2 {
 background-color: #f8f6f3;
-a {color: #F49F10!important; 
+a,button {color: #F49F10!important; 
   transition: color 500ms ease-in-out;};
 }
 
@@ -454,32 +463,50 @@ overflow: hidden;
 animation: moveDown 2000ms;
 animation-delay: 1500ms;
 transition: background-color 1000ms ease-in-out;
-
 background: rgba(255,255,255,0);
 .header__inner-header {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 80px;
-text-align: center;
 align-items: center;
-justify-content: space-evenly;
-margin: auto 12.5%;
+justify-content: center;
+text-align: center;
+margin-left: 5%;
+margin-right: 5%;
 height: 80px;
 
+
+.header__navigation:first-of-type {
+    @media (max-width: $tablet-viewport) {
+      text-align: left;
+    }  
+}
+
 .header__navigation {
-  nav {
+  .header__desktop-nav {
+    @media (max-width: $tablet-viewport) {
+      display:none;
+    }
+  }
+   
+
     a {
       margin: 0 20px;
       text-decoration: none;
       letter-spacing: 1.75px;
       text-transform: uppercase;
       font-size: 0.75rem;
-      color: black;
-        }
+      color: black;  
+          
   }
+        
   .toggle-menu {
+    display:none;
     z-index: 10;
+    @media (max-width: $tablet-viewport) {
+      display:block;
+      margin-left: auto;
   }
+}
 }
 }
 }
@@ -586,21 +613,16 @@ padding: 10%;
 } 
 }
 
-.display {
-opacity: 0;
-}
-
 .hero {
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-&:before {
+
+&::after {
 content: '';
 position: absolute;
-width: 100%;
+width: 100;
 height: 100%;
 top: 0;
 left: 0;
-z-index: 0;
-background: #fff;
+z-index: 1;
 }
 background-size: cover;
 background-position: center;
@@ -647,6 +669,7 @@ max-width: 100%;
       mark {
         position: relative;
         background: 0 0;
+        letter-spacing: 0.2rem;
         &::before {
           content: '';
           position: absolute;
@@ -678,7 +701,11 @@ max-width: 100%;
   }
 }
 }
-
+.myworks-heading {
+  position: relative;
+  left:0;
+  bottom:0;
+}
 
 
 // Works

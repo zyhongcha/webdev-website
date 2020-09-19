@@ -4,7 +4,7 @@ import { IoLogoGithub, IoLogoLinkedin, IoLogoXing, IoLogoInstagram } from "react
 import { IconContext } from "react-icons";
 import gsap from "gsap";
 import { TimelineLite } from 'gsap/gsap-core';
-import  CSSRulePlugin  from "gsap/CSSRulePlugin";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Hamburger = ({ isOpen, setOpen }) => {
 
@@ -113,10 +113,10 @@ const Hamburger = ({ isOpen, setOpen }) => {
           <div className="hamburger-menu__container-footer">
             <nav>
               <IconContext.Provider value={{ size: "2.5rem" }}>
-                <Link to="/contact" onClick={handleLinkClick}><IoLogoGithub /></Link>
-                <Link to="/contact" onClick={handleLinkClick}><IoLogoLinkedin /></Link>
-                <Link to="/contact" onClick={handleLinkClick}><IoLogoXing /></Link>
-                <Link to="/contact" onClick={handleLinkClick}><IoLogoInstagram /></Link>
+                <a href="https://github.com/zyhongcha" target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
+                <a href="https://www.linkedin.com/in/zyhong-liu-a58bb2196/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
+                <a href="https://www.xing.com/profile/Zyhong_Liu/" target="_blank" rel="noopener noreferrer"><IoLogoXing /></a>
+                <a href="https://www.instagram.com/zyhongcha/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
               </IconContext.Provider>
             </nav>
           </div>

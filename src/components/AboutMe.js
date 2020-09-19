@@ -9,7 +9,7 @@ const AboutMe = ( ) => {
     markdownRemark(frontmatter: { id: { eq: "about-me" }}) {
       html
     }
-  image: file(relativePath: { eq: "me.jpg" }) {
+  image: file(relativePath: { eq: "Zyhong-bw.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 512, quality: 100) {
         ...GatsbyImageSharpFluid
