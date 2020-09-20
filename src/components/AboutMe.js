@@ -1,14 +1,38 @@
-import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image';
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { useIntersection } from "use-intersection";
+import { TweenLite } from "gsap";
 
-const AboutMe = () => {
+export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
+  const triggerRef = useRef(null);
+
+  const intersection = useIntersection(triggerRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+    once: true
+  });
+  useEffect(() => {
+    if (intersection) {
+      TweenLite.to("#about .fadeIn", 1, {
+        opacity: 1,
+        ease: "power4.out",
+        y: 0,
+        stagger: 0.3,
+      }
+      )
+    }
+  }, [intersection]);
+
+
 
   const data = useStaticQuery(graphql`
   query {
     markdownRemark(frontmatter: { id: { eq: "about-me" }}) {
       html
     }
+
   image: file(relativePath: { eq: "Zyhong-bw.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 512, quality: 100) {
@@ -17,21 +41,42 @@ const AboutMe = () => {
     }
   }
   }
-  `);
+  `)
+
   return (
-    <section id="about" className="about-me__container" >
-      <div className="about-me__container-inner-wrapper">
-        <h2>Hello.</h2>
-        <div className="about-me__container-inner-wrapper-text"
+    <section id="about" className="about-me__container" ref={triggerRefThree}>
+      <div className="about-me__container-inner-wrapper" ref={aboutMeElement}>
+        <div className="about-me__container-inner-wrapper-text fadeIn" ref={triggerRef}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div id="portrait" ><Img fluid={data.image.childImageSharp.fluid} /></div>
+        <div class="about-me__container-inner-wrapper-skills">
+          <h1>Skills</h1>
+          <ul>
+            <li>Fluent in: English, German, Japanese, Cantonese</li>
+            <li>Frontend: HTML, CSS, JavaScript (jQuery, React, Gatsby)</li>
+            <li>Backend: LAMP/LEMP Stack (PHP, MySQL, Nginx, Apache)</li>
+            <li>Wordpress Development, Magento, WooCommerce</li>
+            <li>Design: Photoshop, Lightroom, Illustrator</li>
+          </ul>
+        </div>
         <p>Interested in getting to know more about me? Message me!</p>
-        <div id="portrait"><Img fluid={data.image.childImageSharp.fluid} /></div>
+        <form class="contact-form" name="contact" netlify>
+          <p>
+            <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>Message<textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
       </div>
 
-
     </section>
-
-
   )
 
 

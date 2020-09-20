@@ -2,7 +2,6 @@ import React from "react"
 import useSticky from "../components/hooks/useSticky"
 import useNavChangeColor from "../components/hooks/useNavChangeColor"
 import useIntersected from "../components/hooks/useIntersected"
-import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 import Header from '../components/header'
@@ -15,8 +14,8 @@ import "../styles/styles.scss"
 
 const IndexPage = () => {
   const { isSticky, element } = useSticky()
-  const { hasReached, newWorkElement } = useNavChangeColor()
-  const { isIntersectedAt, triggerRefOne, triggerRefTwo } = useIntersected()
+  const { hasReached, newWorkElement, aboutMeElement  } = useNavChangeColor()
+  const { isIntersectedAt, triggerRefOne, triggerRefTwo,triggerRefThree } = useIntersected()
 
   return (
     <div className="App">
@@ -27,7 +26,7 @@ const IndexPage = () => {
         <div className="afterHeaderWrapper">
           <Works element={element} triggerRefOne={triggerRefOne} />
           <WorksTwo newWorkElement={newWorkElement} triggerRefTwo={triggerRefTwo} />
-          <AboutMe />
+          <AboutMe aboutMeElement={aboutMeElement} triggerRefThree={triggerRefThree}/>
         </div>
       </div>
     </div>

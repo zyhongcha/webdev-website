@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TweenLite, TimelineLite, Power2 } from "gsap";
+import { TimelineLite } from "gsap";
 
 const Banner = () => {
 
@@ -8,7 +8,7 @@ const Banner = () => {
   useEffect(() => {
 
     tl.to(".display.intro", 1, { opacity: 1, stagger: 1 })
-      .to(".display", 1, { opacity: 1 }).to(".hero:after", { opacity: 1})
+      .to(".display", 1, { opacity: 1 })
   }, []);
 
   return (

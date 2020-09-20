@@ -50,6 +50,8 @@ const Header = ({ isIntersectedAt }) => {
       return "works-1"
     } else if (isIntersectedAt === 2) {
       return "works-2"
+    } else if (isIntersectedAt === 3 ) {
+      return "about"
     }
   }
   return (

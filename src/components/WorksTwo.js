@@ -1,11 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from "gatsby";
-import { Link } from "gatsby";
-import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
-import { IconContext } from 'react-icons';
 import { TweenLite } from "gsap";
-import CSSRulePlugin from "gsap/CSSRulePlugin";
 import { useIntersection } from "use-intersection";
 
 export function WorksTwo({ newWorkElement, triggerRefTwo }) {

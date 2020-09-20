@@ -3,10 +3,20 @@ import { useEffect, useState, useRef } from 'react';
 function useNavChangeColor() {
   const [hasReached, setHasReached] = useState(false);
   let newWorkElement = useRef(null);
+  let aboutMeElement = useRef(null);
+
 
   const handleScroll = () => {
-    window.scrollY > newWorkElement.current.getBoundingClientRect().bottom 
-    ? setHasReached(true) : setHasReached(false);
+    if (window.scrollY > newWorkElement.current.getBoundingClientRect().bottom) {
+      setHasReached(true)
+    }
+    else if (window.scrollY > aboutMeElement.current.getBoundingClientRect().bottom) {
+      setHasReached(true)
+
+    }
+    else {
+      setHasReached(false);
+    }
   }
 
   useEffect(() => {
@@ -16,6 +26,6 @@ function useNavChangeColor() {
     }
   }, [handleScroll])
 
-  return { hasReached, newWorkElement }
+  return { hasReached, newWorkElement, aboutMeElement }
 }
 export default useNavChangeColor;
