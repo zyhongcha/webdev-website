@@ -48,7 +48,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper" ref={aboutMeElement}>
         <div className="about-me__container-inner-wrapper-text fadeIn" ref={triggerRef}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <form class="contact-form fadeIn" id="form" name="contact" data-netlify="true">
+        <form class="contact-form fadeIn" id="form" name="contact" data-netlify="true" method="POST">
           <p>Interested in getting to know more about me?</p>
           <h3>Contact me</h3>
           <p>
