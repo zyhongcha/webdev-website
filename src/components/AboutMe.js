@@ -57,7 +57,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
 
 
         </div>
-        <div class="about-me__container-inner-wrapper-skills fadeIn">
+        <div className="about-me__container-inner-wrapper-skills fadeIn">
           <h1>Skills</h1>
           <ul>
             <li>Fluent in: English, German, Japanese, Cantonese</li>

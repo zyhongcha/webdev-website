@@ -10,14 +10,14 @@ const Hamburger = ({ isOpen, setOpen }) => {
   let menuRef = useRef(null);
   let revealMenuRef = useRef(null);
   let revealMenuBackgroundRef = useRef(null);
-  let linkToTopRef = useRef(null);
+  let linkToTopRef= useRef(null);
   let tl = new TimelineLite();
   let tl2 = new TimelineLite();
 
   useEffect(() => {
     if (isOpen.clicked === false) {
       closeMenuAnimation();
-    } else if (isOpen.clicked === true || isOpen.clicked === true && isOpen.initial === null) {
+    } else if (isOpen.clicked === true || (isOpen.clicked === true && isOpen.initial === null)) {
       openMenuAnimation();
     }
   }, [isOpen])

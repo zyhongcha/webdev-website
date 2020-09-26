@@ -66,7 +66,7 @@ query {
         <div className="works-container__inner-wrapper" >
           <div className="works-container__showcase" ref={newWorkElement} >
             <div className="works-container__showcase-display" ref={triggerRef}>
-              <a href="https://zyhongcha.com" target="_blank"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
+              <a href="https://zyhongcha.com" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
             </div>
             <div className="works-container__showcase-description" id="zyhongcha-description" >
               <div className="works-container__showcase-description-text">
