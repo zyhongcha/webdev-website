@@ -18,28 +18,28 @@ const Banner = () => {
         <div className="hero__main-text">
           <h1 className="display intro" style={{ lineHeight: "2.7rem", color: "#434343" }}>Create,</h1>
           <h1 className="display intro">Experience;</h1>
-          <p className="display">Hello, my name is Zyhong Liu. I am a Web Developer, Freelancer, Asian Food Promoter and Tea & Sake Specialist. I strive for connecting intercultural relationships. Scroll down to learn more about me.</p>
+          <p className="display">Hello, my name is Zyhong Liu. I am a Web Developer, Freelancer, Asian Food Promoter and Tea & Sake Specialist based in Cologne, Germany. I strive for connecting intercultural relationships. Scroll down to learn more about me.</p>
         </div>
 
         <div className="hero__cta display">
-        <a href="#form">
-          <div className="button" id="btn-contact">
-            <span className="line-1"></span>
-            <span className="line-2"></span>
-            <span className="line-3"></span>
-            <span className="line-4"></span>
+          <a href="#form">
+            <div className="button" id="btn-contact">
+              <span className="line-1"></span>
+              <span className="line-2"></span>
+              <span className="line-3"></span>
+              <span className="line-4"></span>
               Contact me now
             </div>
-            </a>
+          </a>
           <a href="#sake-academy">
-          <div className="button" id="btn-portfolio">
-            <span className="line-1"></span>
-            <span className="line-2"></span>
-            <span className="line-3"></span>
-            <span className="line-4"></span>
+            <div className="button" id="btn-portfolio">
+              <span className="line-1"></span>
+              <span className="line-2"></span>
+              <span className="line-3"></span>
+              <span className="line-4"></span>
               See my works
             </div>
-            </a>
+          </a>
         </div>
       </div>
     </div>
