@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Hi, thank you for your message! I'll get back to you very soon!"))
       .catch(error => alert(error));
 
     e.preventDefault();
