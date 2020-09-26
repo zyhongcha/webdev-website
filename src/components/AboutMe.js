@@ -11,7 +11,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
   const intersection = useIntersection(triggerRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.8,
+    threshold: 0,
     once: true
   });
   useEffect(() => {
@@ -20,7 +20,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
         opacity: 1,
         ease: "power4.out",
         y: 0,
-        stagger: 0.3,
+        stagger: 0.1,
       }
       )
     }
@@ -49,7 +49,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper" ref={aboutMeElement}>
         <div className="about-me__container-inner-wrapper-text fadeIn" ref={triggerRef}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      <ContactForm />
+        <ContactForm />
 
 
 

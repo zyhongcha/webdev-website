@@ -8,10 +8,11 @@ export function WorksTwo({ newWorkElement, triggerRefTwo }) {
 
   const triggerRef = useRef(null);
 
+
   const intersection = useIntersection(triggerRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.8,
+    threshold: 0.6,
     once: true
   });
 
@@ -64,7 +65,7 @@ query {
     <section id="zyhongcha" ref={triggerRefTwo}>
       <div className="works-container">
         <div className="works-container__inner-wrapper" >
-          <div className="works-container__showcase" ref={newWorkElement} >
+          <div className="works-container__showcase" ref={newWorkElement}>
             <div className="works-container__showcase-display" ref={triggerRef}>
               <a href="https://zyhongcha.com" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
             </div>

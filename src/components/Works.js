@@ -12,7 +12,7 @@ function Works({ element, triggerRefOne }) {
   const intersection = useIntersection(triggerRef, {
     root: null,
     rootMargin: "200px 0px 0px 0px",
-    threshold: 1,
+    threshold: 0.6,
     once: true
   });
 
