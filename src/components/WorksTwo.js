@@ -91,11 +91,11 @@ This project kickstarted my pursuit in web development. The design follows moder
               </div>
               <div className="works-container__showcase-details-mobileshots">
                 <div className="works-container__mobile-1 fadeIn" >
-                  <a href="https://zyhongcha.com/teascience/tea-research-news-april-2020-the-taste-of-shincha/" target="_blank"><Img fluid={data.zyhongchaTwo.childImageSharp.fluid} /></a></div>
+                  <a href="https://zyhongcha.com/teascience/tea-research-news-april-2020-the-taste-of-shincha/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaTwo.childImageSharp.fluid} /></a></div>
                 <div className="works-container__mobile-2 fadeIn">
-                  <a href="https://zyhongcha.com/teascience/ice-brew-a-little-sip-of-the-sweet-dew-of-heaven/" target="_blank"><Img fluid={data.zyhongchaThree.childImageSharp.fluid} /></a></div>
+                  <a href="https://zyhongcha.com/teascience/ice-brew-a-little-sip-of-the-sweet-dew-of-heaven/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaThree.childImageSharp.fluid} /></a></div>
                 <div className="works-container__mobile-3 fadeIn">
-                  <a href="https://zyhongcha.com" target="_blank"><Img fluid={data.zyhongchaFour.childImageSharp.fluid} /></a></div>
+                  <a href="https://zyhongcha.com" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaFour.childImageSharp.fluid} /></a></div>
               </div>
             </div>
           </div>

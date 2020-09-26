@@ -4,7 +4,6 @@ import { IoLogoGithub, IoLogoLinkedin, IoLogoXing, IoLogoInstagram } from "react
 import { IconContext } from "react-icons";
 import gsap from "gsap";
 import { TimelineLite } from 'gsap/gsap-core';
-import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 const Hamburger = ({ isOpen, setOpen }) => {
 

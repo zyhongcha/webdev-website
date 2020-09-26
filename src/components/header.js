@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { IoLogoGithub, IoLogoLinkedin, IoLogoXing, IoLogoInstagram } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
@@ -50,7 +49,7 @@ const Header = ({ isIntersectedAt }) => {
       return "works-1"
     } else if (isIntersectedAt === 2) {
       return "works-2"
-    } else if (isIntersectedAt === 3 ) {
+    } else if (isIntersectedAt === 3) {
       return "about"
     }
   }
@@ -60,10 +59,10 @@ const Header = ({ isIntersectedAt }) => {
         <div className="header__inner-header">
           <div className="header__navigation">
             <nav>
-              <Link to="/" className="logo">ZYHONG LIU</Link>
+              <Link to="/" className={isOpen.clicked===true ? 'hidden logo' : "logo"}>ZYHONG LIU</Link>
             </nav>
           </div>
-          <div className="header__navigation">
+          <div className="header__navigation" id="center-menu">
             <nav>
               <Link to="#sake-academy">Works</Link>
               <Link to="#about">About</Link>
@@ -86,13 +85,6 @@ const Header = ({ isIntersectedAt }) => {
       <Hamburger isOpen={isOpen} setOpen={setOpen} />
     </header>
   )
-}
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 

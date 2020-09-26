@@ -48,19 +48,9 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper" ref={aboutMeElement}>
         <div className="about-me__container-inner-wrapper-text fadeIn" ref={triggerRef}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <div id="portrait" ><Img fluid={data.image.childImageSharp.fluid} /></div>
-        <div class="about-me__container-inner-wrapper-skills">
-          <h1>Skills</h1>
-          <ul>
-            <li>Fluent in: English, German, Japanese, Cantonese</li>
-            <li>Frontend: HTML, CSS, JavaScript (jQuery, React, Gatsby)</li>
-            <li>Backend: LAMP/LEMP Stack (PHP, MySQL, Nginx, Apache)</li>
-            <li>Wordpress Development, Magento, WooCommerce</li>
-            <li>Design: Photoshop, Lightroom, Illustrator</li>
-          </ul>
-        </div>
-        <p>Interested in getting to know more about me? Message me!</p>
-        <form class="contact-form" name="contact" netlify>
+ <form class="contact-form fadeIn" id="form" name="contact" netlify>
+        <p>Interested in getting to know more about me?</p>
+        <h3>Contact me</h3>         
           <p>
             <label>Name <input type="text" name="name" /></label>
           </p>
@@ -71,11 +61,29 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
             <label>Message<textarea name="message"></textarea></label>
           </p>
           <p>
-            <button type="submit">Send</button>
+            <button className="button" type="submit">Send</button>
           </p>
         </form>
-      </div>
 
+
+
+        <div id="portrait" className="fadeIn"><Img fluid={data.image.childImageSharp.fluid} />
+        
+        
+        </div>
+        <div class="about-me__container-inner-wrapper-skills fadeIn">
+          <h1>Skills</h1>
+          <ul>
+            <li>Fluent in: English, German, Japanese, Cantonese</li>
+            <li>Frontend: HTML, CSS, JavaScript, React, Gatsby</li>
+            <li>Backend: LAMP/LEMP Stack: PHP, MySQL, Nginx, Apache</li>
+            <li>Wordpress Development, Magento, WooCommerce</li>
+            <li>Design: Photoshop, Lightroom, Illustrator</li>
+            <li>Data Analysis: R, Python, Tableau, Power BI</li>
+            <li>SEO: Google Analytics, Google Ads, Matomo </li>
+          </ul>
+        </div>
+      </div>
     </section>
   )
 
