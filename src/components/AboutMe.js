@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { useIntersection } from "use-intersection";
 import { TweenLite } from "gsap";
+import ContactForm from "./contactform";
 
 export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
   const triggerRef = useRef(null);
@@ -48,22 +49,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper" ref={aboutMeElement}>
         <div className="about-me__container-inner-wrapper-text fadeIn" ref={triggerRef}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <form class="contact-form fadeIn" id="form" name="contact" data-netlify="true" method="POST">
-          <p>Interested in getting to know more about me?</p>
-          <h3>Contact me</h3>
-          <p>
-            <label>Name <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Email <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Message<textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button className="button" type="submit">Send</button>
-          </p>
-        </form>
+      <ContactForm />
 
 
 
