@@ -70,7 +70,7 @@ query {
         <div className="works-container__inner-wrapper" ref={element}>
           <div className="works-container__showcase">
             <div className="works-container__showcase-display" ref={triggerRef}>
-              <a href="https://sake-academy.eu" target="_blank"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>
+              <a href="https://sake-academy.eu" target="_blank" rel="noopener noreferrer"><Img fluid={data.sakeOne.childImageSharp.fluid} /></a>
             </div>
             <div className="works-container__showcase-description" id="sake-academy-description" >
               <div className="works-container__showcase-description-text">

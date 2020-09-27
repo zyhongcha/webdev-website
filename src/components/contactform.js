@@ -1,4 +1,6 @@
 import React from "react"
+//I am using netlify contact forms here
+
 
 const encode = (data) => {
   return Object.keys(data)
@@ -32,6 +34,8 @@ class ContactForm extends React.Component {
     const { name, email, message } = this.state;
     return (
       <form className="contact-form fadeIn" onSubmit={this.handleSubmit}>
+        <br />
+        <h3>Let's work together, contact me here:</h3>
         <p>
           <label>
             Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
