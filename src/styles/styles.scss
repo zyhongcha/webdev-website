@@ -734,12 +734,16 @@ max-width: 100%;
 #sake-academy {
 background: #2C3246;
 position: relative;
+padding-bottom: 200px;
+padding-top: 200px;
+
 
 &::before {
   content:'';
   background: url("../images/DotGrid.png") top center repeat-y;
   background-size: contain;
   position: absolute;
+  top:0;
   width: 100%;
   height: 100%;
   filter: invert(0.4);
@@ -751,8 +755,12 @@ h1,h2,h3,h4,p {
 #zyhongcha {
 background: #f8f6f3;
 position: relative;
+padding-bottom: 200px;
+padding-top: 200px;
+
 &::before {
   content:'';
+  top:0;
   background: url("../images/DotGrid.png") top center repeat-y;
   background-size: contain;
   position: absolute;
@@ -773,8 +781,7 @@ h4 {
 &__inner-wrapper {
   max-width:1200px;
   flex: 0 0 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+
 
   @media (max-width: $tablet-viewport) {
     max-width: 800px;
@@ -891,21 +898,32 @@ flex: 0 0 calc(50% - 1rem);
 
 // AboutMe
 .about-me__container {
-display:flex;
 position: relative;
-background: url("../images/DotGrid.png") top center repeat-y, $primaryColor;
-background-size: cover;
-justify-content: center;
-padding-top: 10%;
-padding-bottom: 10%;
+
+&::before {
+  content:'';
+  background: url("../images/DotGrid.png") top center repeat-y;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+&-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 &-inner-wrapper {
   display:grid;
+  justify-content: center;
+  margin: 200px auto;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 300px 1fr 1fr;
   column-gap: 4.5rem;
   max-width: 1200px;
   padding: 5% 200px;
   background: #6d6d6d;
+  z-index:9;
   box-shadow:
   0 0 100px 0 rgba(0,0,0,0.07),
   0 0 180px 0 #000000a6;
@@ -913,12 +931,13 @@ padding-bottom: 10%;
   @media (max-width: $phone-viewport) {
     display:flex;
     flex-wrap:wrap;
+    max-width: 86%;
+    padding: 5% 7.5%!important;
   }
   @media(max-width: $tablet-viewport) {
     padding: 15% 12.5%;
   }
   @media(max-width: $phone-viewport) {
-    padding: 15%;
   }
 
     &-text {

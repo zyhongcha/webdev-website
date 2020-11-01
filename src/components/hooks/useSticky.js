@@ -1,26 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 
-function useSticky() {
+const useSticky = () => {
   const [isSticky, setIsSticky] = useState(false);
   const element = useRef(null);
 
-
-
-  const debounce = (func, wait = 20, immediate = true) => {
-    let timeOut
-    return () => {
-      let context = this,
-        args = arguments
-      const later = () => {
-        timeOut = null
-        if (!immediate) func.apply(context, args)
-      }
-      const callNow = immediate && !timeOut
-      clearTimeout(timeOut)
-      timeOut = setTimeout(later, wait)
-      if (callNow) func.apply(context, args)
-    }
-  }
   const handleScroll = () => {
     window.scrollY >= element.current.getBoundingClientRect().top ? setIsSticky(true) : setIsSticky(false);
   }
@@ -28,11 +11,11 @@ function useSticky() {
   
   useEffect(() => {
  
-    window.addEventListener('scroll', debounce(handleScroll));
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', () => handleScroll)
     }
-  }, [debounce, handleScroll])
+  }, [handleScroll])
 
   return { isSticky, element }
 }

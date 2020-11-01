@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form className="contact-form fadeIn" onSubmit={this.handleSubmit}>
+      <form className="contact-form fadeIn" id="form" onSubmit={this.handleSubmit}>
         <br />
         <h3>Let's work together, contact me here:</h3>
         <p>

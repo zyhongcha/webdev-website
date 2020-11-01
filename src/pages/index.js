@@ -12,7 +12,7 @@ import Footer from '../components/footer'
 import "normalize.css"
 import "../styles/styles.scss"
 
-const IndexPage = () => {
+function IndexPage() {
   const { isSticky, element } = useSticky()
   const { hasReached, newWorkElement, aboutMeElement } = useNavChangeColor()
   const { isIntersectedAt, triggerRefOne, triggerRefTwo, triggerRefThree } = useIntersected()

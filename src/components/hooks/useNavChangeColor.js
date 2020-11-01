@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-function useNavChangeColor() {
+const useNavChangeColor =() => {
   const [hasReached, setHasReached] = useState(false);
   let newWorkElement = useRef(null);
   let aboutMeElement = useRef(null);
