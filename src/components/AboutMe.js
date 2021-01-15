@@ -64,7 +64,7 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
           <li>Fluent in: English, German, Japanese, Cantonese</li>
           <li>Frontend: HTML, CSS, JavaScript, React, Gatsby</li>
           <li>Backend: LAMP/LEMP Stack: PHP, MySQL, Nginx, Apache</li>
-          <li>Wordpress Development, Magento, WooCommerce</li>
+          <li>CMS: Wordpress Development, Magento, WooCommerce</li>
           <li>Design: Photoshop, Lightroom, Illustrator</li>
           <li>Data Analysis: R, Python, Tableau, Power BI</li>
           <li>SEO: Google Analytics, Google Ads, Matomo </li>
