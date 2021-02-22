@@ -1,0 +1,91 @@
+#app {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  place-content: center;
+}
+
+#app button {
+  flex: calc(50% - 12px);
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 0px;
+}
+
+#app button:hover {
+  background: rgb(210, 228, 194);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.playingCards {
+  text-align: center;
+}
+.card {
+  display: inline;
+}
+.player-hand,
+.dealer-hand {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  place-content: center;
+}
+.player {
+  display: block;
+}
+.player-hand {
+  display: inline-table;
+  transform: translateX(-48px);
+}
+
+.player-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 260px;
+  margin: auto;
+}
+.restart {
+  display: block;
+  width: 100%;
+  margin: px 0;
+}
+
+.game-result {
+  font-weight: 700;
+}
+.score {
+  text-align: center;
+}
+
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.blackjack-app {
+  display: flex;
+  place-content: center;
+  flex-flow: column wrap;
+  font-family: monospace;
+  height: 100vh;
+}
+.title {
+  text-align: center;
+}
+
+.project-source {
+  text-decoration: underline;
+  color:#000;
+}
+svg {
+  margin: 0 8px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
