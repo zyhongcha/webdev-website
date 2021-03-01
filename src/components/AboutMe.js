@@ -61,13 +61,18 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper-skills fadeIn">
         <h1>Skills</h1>
         <ul>
-          <li>Fluent in: English, German, Japanese, Cantonese</li>
-          <li>Frontend: HTML, CSS, JavaScript, React, Gatsby</li>
-          <li>Backend: LAMP/LEMP Stack: PHP, MySQL, Nginx, Apache</li>
+          <li>Frontend: HTML, CSS, JavaScript, TypeScript, React, Gatsby, Next</li>
+          <li>Backend: PHP, MySQL, MongoDB, Nginx, Apache, Express</li>
           <li>CMS: Wordpress Development, Magento, WooCommerce</li>
+          <li>Data Analysis: Python, Tableau, Power BI</li>
+          <li>Cloud: AWS S3, EC2</li>
+          <li>SEO: Google Analytics, Google Ads, Matomo, SendInBlue </li>
           <li>Design: Photoshop, Lightroom, Illustrator</li>
-          <li>Data Analysis: R, Python, Tableau, Power BI</li>
-          <li>SEO: Google Analytics, Google Ads, Matomo </li>
+          <br/>
+          <br/>
+          <li>Fluent in: English, German, Japanese, Cantonese</li>
+          <li>Sake Enthusiast (WSET Level 3 Award)</li>
+          <li>Tea tutor and tea science writer</li>
         </ul>
       </div>
     </div>
