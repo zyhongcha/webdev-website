@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: `Zyhong Liu`,
-    description: `My personal website`,
+    description: `Zyhong Studio`,
     author: `@zyhong`,
   },
   plugins: [
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: `markdown`,
         path: path.join(__dirname, `src`, `markdown`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.zyhong.studio",
+        acl: null,
       },
     },
     `gatsby-transformer-sharp`,
