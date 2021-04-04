@@ -1,5 +1,7 @@
 const path = require('path');
 
+const siteAddress = new URL("https://www.zyhong.studio")
+
 module.exports = {
   siteMetadata: {
     title: `Zyhong Liu`,
@@ -28,7 +30,15 @@ module.exports = {
       options: {
         bucketName: "www.zyhong.studio",
         acl: null,
+        protocol: siteAddress.protocol.slice(0, -1),
+        hostname: siteAddress.hostname,
       },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+          siteUrl: siteAddress.href.slice(0, -1),
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

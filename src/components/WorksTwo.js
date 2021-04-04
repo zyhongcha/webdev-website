@@ -67,15 +67,15 @@ query {
         <div className="works-container__inner-wrapper" >
           <div className="works-container__showcase" ref={newWorkElement}>
             <div className="works-container__showcase-display" ref={triggerRef}>
-              <a href="https://zyhongcha.com" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
+              <a href="https://www.journaloftea.org" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaOne.childImageSharp.fluid} /></a>
             </div>
             <div className="works-container__showcase-description" id="zyhongcha-description" >
               <div className="works-container__showcase-description-text">
 
-                <h4 className="fadeIn">Scientific Tea Blog</h4>
-                <h2 className="fadeIn">Zyhong's Journal of Tea</h2>
+                <h4 className="fadeIn">Scientific Tea Publishing Platform</h4>
+                <h2 className="fadeIn">Journal of Tea</h2>
                 <p className="fadeIn">
-                  <h3>As of Jan 2021, I am currently working on relaunching this site using the JAMStack React/Next.js</h3>
+                  <h3>As of April 2021, I am currently working on relaunching this site, transforming the site to an open community-based publishing platform</h3>
                   Information about tea is widely available on the internet; and so are the styles to approach different tea subjects: Be it historical, philosophical, spiritual or educative. Despite the variety, one approach is rather scarce: The scientifc one.
 <br /><br />
 This journal aims to provide knowledge about tea for the general tea enthusiast around the world via passionate personal stories, but also via science-based articles. Many of the prevalent tea myths or established practices will be tackled and tried to be answered in an evidence-based way. #TeaScience articles will regularly delve deep into the subjects, referencing several data bases and scientific papers from research institutes.
@@ -87,17 +87,17 @@ This project kickstarted my pursuit in web development. The design follows moder
                 <div className="works-container__showcase-details">
                   <div className="works-container__showcase-details-text fadeIn" >
                     <h3>Technical Details</h3>
-                    <p>CMS: Wordpress, Frontend built with Elementor Page Builder.</p>
+                    <p>Jamstack architecture based on Next.js and Strapi. Hosted on AWS.</p>
                   </div>
                 </div>
               </div>
               <div className="works-container__showcase-details-mobileshots">
                 <div className="works-container__mobile-1 fadeIn" >
-                  <a href="https://zyhongcha.com/teascience/tea-research-news-april-2020-the-taste-of-shincha/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaTwo.childImageSharp.fluid} /></a></div>
+                  <a href="https://journaloftea.org/article/tea-research-news-april-2020-the-taste-of-shincha/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaTwo.childImageSharp.fluid} /></a></div>
                 <div className="works-container__mobile-2 fadeIn">
-                  <a href="https://zyhongcha.com/teascience/ice-brew-a-little-sip-of-the-sweet-dew-of-heaven/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaThree.childImageSharp.fluid} /></a></div>
+                  <a href="https://journaloftea.org/article/ice-brew-tea-science-and-experiment/" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaThree.childImageSharp.fluid} /></a></div>
                 <div className="works-container__mobile-3 fadeIn">
-                  <a href="https://zyhongcha.com" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaFour.childImageSharp.fluid} /></a></div>
+                  <a href="https://journaloftea.org" target="_blank" rel="noopener noreferrer"><Img fluid={data.zyhongchaFour.childImageSharp.fluid} /></a></div>
               </div>
             </div>
           </div>

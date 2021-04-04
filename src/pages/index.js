@@ -24,8 +24,8 @@ function IndexPage() {
         <Banner />
         <SEO title="Home" />
         <div className="afterHeaderWrapper">
-          <Works element={element} triggerRefOne={triggerRefOne} />
           <WorksTwo newWorkElement={newWorkElement} triggerRefTwo={triggerRefTwo} />
+          <Works element={element} triggerRefOne={triggerRefOne} />
           <AboutMe aboutMeElement={aboutMeElement} triggerRefThree={triggerRefThree} />
           <Footer />
         </div>

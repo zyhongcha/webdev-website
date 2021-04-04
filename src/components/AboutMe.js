@@ -63,10 +63,10 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
         <ul>
           <li>Frontend: HTML, CSS, JavaScript, TypeScript, React, Gatsby, Next</li>
           <li>Backend: PHP, MySQL, MongoDB, Nginx, Apache, Express</li>
-          <li>CMS: Wordpress Development, Magento, WooCommerce</li>
+          <li>CMS: Wordpress Development, Magento, WooCommerce, Strapi</li>
           <li>Data Analysis: Python, Tableau, Power BI</li>
           <li>Cloud: AWS S3, EC2</li>
-          <li>SEO: Google Analytics, Google Ads, Matomo, SendInBlue </li>
+          <li>SEO: Google Analytics, Google Ads, Matomo, SendinBlue </li>
           <li>Design: Photoshop, Lightroom, Illustrator</li>
           <br/>
           <br/>
