@@ -896,6 +896,8 @@ header {
   &-wrapper {
     display: flex;
     justify-content: center;
+
+
   }
 
   &-inner-wrapper {
@@ -917,6 +919,7 @@ header {
     p {
       color: #fff;
     }
+    
     @media (max-width: $phone-viewport) {
       display: flex;
       flex-wrap: wrap;
@@ -928,6 +931,10 @@ header {
     }
     @media (max-width: $phone-viewport) {
     }
+ 
+      .form__link {
+        color: #f49f10;
+      }
 
     &-text {
       max-width: 900px;
@@ -956,25 +963,6 @@ header {
         flex: 1 1 100%;
         order: -1;
         margin-bottom: 3rem;
-      }
-    }
-    .contact-form {
-      grid-column: 1/2;
-      grid-row: 3/4;
-      @media (max-width: $phone-viewport) {
-        order: 3;
-      }
-
-      input {
-        width: 100%;
-      }
-
-      textarea {
-        width: 100%;
-        min-height: 160px;
-      }
-      button {
-        color: #fff;
       }
     }
   }

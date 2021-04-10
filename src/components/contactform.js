@@ -1,5 +1,4 @@
-import React from "react"
-//I am using netlify contact forms here
+import React from 'react'
 
 
 const encode = (data) => {
@@ -8,54 +7,11 @@ const encode = (data) => {
     .join("&");
 }
 
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
-  }
-
-  /* Here’s the juicy bit for posting the form submission */
-
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() => alert("Hi, thank you for your message! I'll get back to you very soon!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  render() {
-    const { name, email, message } = this.state;
-    return (
-      <form className="contact-form fadeIn" id="form" onSubmit={this.handleSubmit}>
-        <br />
-        <h3>Let's work together, contact me here:</h3>
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <button className="button" type="submit">Send</button>
-        </p>
-      </form>
-    );
-  }
+function ContactForm() {
+  return (
+    <div class="#form">
+  <h3>Interested in teaming up? Let's work together! <a class="form__link" href="mailto:zyhongcha@gmail.com">Contact me</a>.</h3>
+    </div>
+  )
 }
 export default ContactForm;
