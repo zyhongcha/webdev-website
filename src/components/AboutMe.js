@@ -60,9 +60,9 @@ export const AboutMe = ({ aboutMeElement, triggerRefThree }) => {
       <div className="about-me__container-inner-wrapper-skills fadeIn">
         <h1>Skills</h1>
         <ul>
-          <li>Frontend: HTML, CSS, JavaScript, TypeScript, React, Gatsby, Next</li>
-          <li>Backend: PHP, MySQL, MongoDB, Nginx, Apache, Express</li>
-          <li>CMS: Wordpress Development, Magento, WooCommerce, Strapi</li>
+          <li>Frontend: HTML, CSS (BEM, Styled Components, Tailwind), JavaScript, TypeScript, React, Gatsby, Next</li>
+          <li>Backend: PHP, MySQL, MongoDB, PostgreSQL, Nginx, Apache, Express</li>
+          <li>CMS: Wordpress, Magento, WooCommerce, Strapi</li>
           <li>Data Analysis: Python, Tableau, Power BI</li>
           <li>Cloud: AWS S3, EC2</li>
           <li>SEO: Google Analytics, Google Ads, Matomo, SendinBlue </li>
